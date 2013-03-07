@@ -18,6 +18,8 @@
 //= require best_in_place
 //= require_tree .
 
+// name and comment validation
+
 function validateform()
 {
 var x=document.forms["myForm"]["info[name]"].value;
@@ -40,9 +42,38 @@ if (x==null || x=="" )
   return false;
   }
 
+// email validation
 
-    
-     
+var e=document.forms["myForm"]["info[email]"].value;
+var atpos=e.indexOf("@");
+var dotpos=e.lastIndexOf(".");
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=e.length)
+  {
+  alert("Not a valid e-mail address");
+  return false;
+  }
+
+  // mobile validation
+
+var m=document.forms["myForm"]["info[mobileNo]"].value;
+
+           
+ 
+           if(isNaN(m)||m.indexOf(" ")!=-1)
+           {
+              alert("Enter numeric value in mobile number")
+              return false; 
+           }
+           if (m.length>10)
+           {
+                alert("enter 10 characters for mobile number");
+                return false;
+           }
+           if (m.charAt(0)!="9")
+           {
+                alert("mobile number should start with 9 ");
+                return false
+           }
 
 
 }
