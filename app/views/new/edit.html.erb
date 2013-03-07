@@ -1,0 +1,15 @@
+<h1>Edit Details</h1>
+<%= form_tag :action => 'update', :id => @info%>
+
+<%= text_field 'info', 'name',:value=>@info.name %>
+
+<label for="city">City</label>
+<%= text_field 'info', 'city',:value=>@info.city %>
+
+<label for="city">email</label>
+<%= text_field 'info', 'email',:value=>@info.email %>
+
+<label for="city">mobileNo</label>
+<%= text_field 'info', 'mobileNo',:value=>@info.mobileNo %>
+
+<%= submit_tag "Save changes" %>

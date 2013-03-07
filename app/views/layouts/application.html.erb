@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>ElectronicShop</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : SimpleCorp 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20132402
+
+-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div id="header" class="container">
+	<div id="logo">
+		<h1><a>Electronics<span>Shop</span></a></h1>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a ></li>
+			<li></a>
+            <li><a ><%=link_to 'Comments' ,{:action => 'userpro' }%></a></li>
+            <li><a ><%=link_to 'Mobiles' ,{:action => 'showmobile'} %></a></li>
+			<li><a ><%=link_to 'Laptops' ,{:action => 'showlaptop'} %></a></li>
+			<li><a ><%=link_to 'Camera' ,{:action => 'showcamera'} %></a></li>
+			<% else %>
+  <li>
+    <h4></a> <a>  </h4>
+  </a></li>
+			
+		</ul>
+	</div>
+</div>
+
+
+
+
+
+<div id="banner-wrapper">
+	<div id="banner" class="container">
+		<%= yield %>
+		
+		</div>
+</div>
+
+
+<div id="footer" class="container">
+	<p>Copyright (c) 2013 ElectronicShop.com. All rights reserved.</p>
+</div>
+</body>
+</html>

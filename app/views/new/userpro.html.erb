@@ -1,0 +1,19 @@
+<h1>Users Comments</h1>
+<form name="myForm" action="userprofile" onsubmit = "return validateform()">
+<fieldset>
+<p><label for="name">Name</label> <%= text_field 'info', 'name' %>
+
+</p>
+<p><label for="city">Comments</label> <%= text_field 'info', 'city' %>
+	<p><label for="email">email</label> <%= text_field 'info', 'email' %>
+
+</p>
+<p><label for="city">MobileNo</label> <%= text_field 'info', 'mobileNo' %>
+
+
+</p>
+<%= submit_tag "Create" %><br/><br/><br/><br/><br/><br/>
+
+
+</fieldset>
+</form> 
